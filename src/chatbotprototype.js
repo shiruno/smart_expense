@@ -144,9 +144,9 @@ function Chatbot() {
   const cannedResponses = [
     { pattern: /help|what can you do/i, reply: "I can show examples, suggest categories, or mock a summary of expenses. Try: 'show categories' or 'summary'" },
     { pattern: /categories?/i, reply: "Common categories: Food, Transport, Bills, Entertainment, Shopping, Others." },
-    { pattern: /summary/i, reply: "This month: 12 transactions, total ₱23,450. (mock data)" },
+    { pattern: /summary/i, reply: "This month: 12 transactions, total ₱23,450." },
     { pattern: /hello|hi/i, reply: "Hello! How can I help with your expenses today?" },
-    { pattern: /add expense (\d+(?:\.\d+)?)/i, reply: (m) => `Got it — added expense of ₱${m[1]} (mock).` },
+    { pattern: /add expense (\d+(?:\.\d+)?)/i, reply: (m) => `Got it — added expense of ₱${m[1]}.` },
   ];
 
   const sendMessage = (text) => {
@@ -247,7 +247,7 @@ function RequireAuth({ children }) {
 }
 
 /* ---------- App (Routing) ---------- */
-export default function App() {
+export default function chatbotprototype() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
